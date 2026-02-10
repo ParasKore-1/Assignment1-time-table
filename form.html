@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validation Form</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Validation form">
+      <div class="header">
+        <h1>Registration Form</h1>
+        <p>Fill the details below. Password must be 8+ characters, include 1 number and 1 special character.</p>
+      </div>
+
+      <form id="signupForm" novalidate>
+        <div class="grid">
+          <div class="field">
+            <label for="name">Name</label>
+            <div class="control">
+              <input id="name" name="name" type="text" placeholder="Enter your full name" autocomplete="name" required />
+            </div>
+            <div class="error" id="nameError" aria-live="polite"></div>
+          </div>
+
+          <div class="field">
+            <label for="age">Age</label>
+            <div class="control">
+              <input id="age" name="age" type="number" placeholder="e.g. 20" min="1" max="120" inputmode="numeric" required />
+            </div>
+            <div class="error" id="ageError" aria-live="polite"></div>
+          </div>
+
+          <div class="field">
+            <label for="mobile">Mobile No</label>
+            <div class="control">
+              <input id="mobile" name="mobile" type="tel" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel" required />
+            </div>
+            <div class="hint">Only digits (example: 9876543210).</div>
+            <div class="error" id="mobileError" aria-live="polite"></div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <div class="control">
+              <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+            </div>
+            <div class="error" id="emailError" aria-live="polite"></div>
+          </div>
+
+          <div class="field full">
+            <label for="password">Password</label>
+            <div class="control">
+              <input id="password" name="password" type="password" placeholder="Create a strong password" autocomplete="new-password" required aria-describedby="passwordRules passwordError" />
+              <button class="toggle" id="togglePassword" type="button" aria-pressed="false">Show</button>
+            </div>
+
+            <div class="rules" id="passwordRules">
+              <div class="rule" id="ruleLen"><span class="dot" aria-hidden="true"></span>Minimum 8 characters</div>
+              <div class="rule" id="ruleNum"><span class="dot" aria-hidden="true"></span>At least 1 number</div>
+              <div class="rule" id="ruleSpec"><span class="dot" aria-hidden="true"></span>At least 1 special character</div>
+            </div>
+
+            <div class="error" id="passwordError" aria-live="polite"></div>
+          </div>
+
+          <div class="field full">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="control">
+              <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter your password" autocomplete="new-password" required aria-describedby="confirmPasswordError" />
+              <button class="toggle" id="toggleConfirmPassword" type="button" aria-pressed="false">Show</button>
+            </div>
+            <div class="error" id="confirmPasswordError" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <button class="btn btn-secondary" type="reset">Reset</button>
+          <span class="status" id="formStatus" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer-note">This is a frontend-only validation demo (no backend).</div>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>
