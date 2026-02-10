@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paras Kore - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #1a365d;
+            --accent: #3182ce;
+            --light: #f7fafc;
+            --text: #2d3748;
+            --text-muted: #718096;
+        }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--light);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+            color: #fff;
+            padding: 3rem 2.5rem;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .tagline {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+        .contact-bar a, .contact-bar span {
+            color: rgba(255,255,255,0.95);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        main {
+            padding: 2.5rem;
+            flex: 1;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 1.5rem;
+        }
+        .item-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+        .item-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--primary);
+        }
+        .item-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .item-sub {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        ul {
+            margin-left: 1.25rem;
+            margin-top: 0.5rem;
+        }
+        li {
+            margin-bottom: 0.35rem;
+        }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .skill-tag {
+            background: var(--light);
+            color: var(--primary);
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        @media (max-width: 600px) {
+            header { padding: 2rem 1.5rem; }
+            h1 { font-size: 1.9rem; }
+            main { padding: 1.5rem; }
+            .contact-bar { flex-direction: column; gap: 0.75rem; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Paras Kore</h1>
+            <p class="tagline">Software Engineer | Full Stack Developer</p>
+            <div class="contact-bar">
+                <span>📧 paras.kore@email.com</span>
+                <span>📱 +91 98765 43210</span>
+                <a href="#">linkedin.com/in/paraskore</a>
+                <a href="#">github.com/paraskore</a>
+            </div>
+        </header>
+        <main>
+            <section>
+                <h2>Summary</h2>
+                <p>Passionate software engineer with 3+ years of experience building scalable web applications. Strong expertise in JavaScript, React, and Node.js. Committed to writing clean, maintainable code and delivering exceptional user experiences.</p>
+            </section>
+            <section>
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <div class="item-header">
+                        <span class="item-title">Senior Developer</span>
+                        <span class="item-date">2022 – Present</span>
+                    </div>
+                    <div class="item-sub">Tech Solutions Pvt Ltd, Mumbai</div>
+                    <ul>
+                        <li>Led development of enterprise web applications serving 50K+ users</li>
+                        <li>Architected microservices reducing deployment time by 40%</li>
+                        <li>Mentored junior developers and conducted code reviews</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="item-header">
+                        <span class="item-title">Software Developer</span>
+                        <span class="item-date">2020 – 2022</span>
+                    </div>
+                    <div class="item-sub">StartUp Innovations, Pune</div>
+                    <ul>
+                        <li>Built RESTful APIs and integrated third-party services</li>
+                        <li>Improved application performance by 35% through optimization</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="item-header">
+                        <span class="item-title">B.Tech in Computer Science</span>
+                        <span class="item-date">2016 – 2020</span>
+                    </div>
+                    <div class="item-sub">University of Mumbai | CGPA: 8.5/10</div>
+                </div>
+            </section>
+            <section>
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
